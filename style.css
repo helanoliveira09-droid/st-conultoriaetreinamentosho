@@ -1,0 +1,377 @@
+
+
+body {
+    /* Define a imagem de fundo */
+    background-image: url('imagem\ fundo.png'); 
+    
+    /* Faz a imagem cobrir toda a página sem repetir */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Mantém a imagem fixa ao rolar a página */
+    background-attachment: fixed; 
+    
+    /* Cor e tamanho da letra que ficará por cima */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--white);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navegação */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Seções */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+
+
+/* Hero Section - imagem depois do cabeçalho */
+
+
+.hero {
+    height: 55vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    color: var(--black);
+    padding-top: 70px;
+
+}
+
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero .description {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Timeline (Experiência) */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    left: 13px;
+    top: 25px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 5px;
+}
+
+.timeline-content .company {
+    display: block;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.timeline-content .date {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Grid (Atividades) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.7); /* 50% de transparência */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Certificados */
+.certificates-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certificate-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.certificate-item:hover {
+    background-color: #f9f9f9;
+}
+
+.cert-info strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.cert-info span {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.btn-small:hover {
+    background-color: var(--primary-color);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin: 30px 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+.social-links {
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.barra-acoes a {
+  display: inline-block;
+  background-color: #00a8ff;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.barra-acoes a:hover {
+  background-color: #0086cc;
+
+}
+ 
+  /* --- CONFIGURAÇÃO PARA DESKTOP (Telas Grandes) --- */
+  .container-texto {
+    width: 80%;               /* Ocupa a maior parte da tela */
+    max-width: 900px;         /* Evita que fique largo demais em monitores gigantes */
+    margin: 0 auto;           /* Centraliza o bloco na tela */
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .texto-responsivo {
+    font-family: 'Caveat', cursive; /* Fonte estilo escrita à mão */
+    font-style: italic;             /* Garante que fique deitado */
+    color: #ffffff;                 /* Cor branca (igual à sua imagem original) */
+    text-align: center;
+    line-height: 1.6;               /* Espaçamento confortável entre linhas */
+    
+    /* Tamanho base para computador */
+    font-size: 28px;                
+  }
+
+  /* --- CONFIGURAÇÃO PARA CELULAR (Telas até 768px) --- */
+  @media (max-width: 768px) {
+    .container-texto {
+      width: 95%;             /* No celular, usa quase toda a largura disponível */
+      padding: 20px 10px;     /* Reduz margens internas para sobrar espaço */
+    }
+
+    .texto-responsivo {
+      /* Diminui o tamanho para não cortar e se ajustar à tela menor */
+      font-size: 20px;        
+      line-height: 1.4;       /* Aproxima um pouco as linhas no celular */
+    }
+  }
+    
+  
+
